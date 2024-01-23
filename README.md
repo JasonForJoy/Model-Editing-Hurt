@@ -36,3 +36,41 @@ data/
         |__ zsre_mend_eval.json
 ```
 You can download these datasets here.
+
+## Prepare the environment
+
+### Requirements
+
+**Note: Please use Python 3.9+**
+To get started, simply install conda and run:
+
+```shell
+git clone https://github.com/JasonForJoy/Model-Editing-Hurt.git
+conda create -n EditHurt python=3.9.7
+...
+pip install -r requirements.txt
+```
+
+### Models
+All models are putted in `hugging_cache/<model_name>` (model_name=gpt2-xl, gpt-j-6B, or llama-7b).
+These could be changed in `hparams/<method_name>/`.
+
+## Evaluation
+Eight different downstream task evaluation metrics are as follows
+
+- `Reasoning`: solve rate
+- `Natural language inference (NLI) `: accuracy of two-way classification
+- `Open-domain QA`: exact match(EM) with the reference answer after minor normalization
+- `Closed-domain QA`: exact match(EM) score
+- `Dialogue`:  select one best-matched response from four available candidates
+- `Summarization`:  the average of ROUGE-1, ROUGE-2 and ROUGE-L
+- `Named entity recognition (NER) `: entity-level F1-score
+- `Sentiment analysis`:  accuracy of two-wayclassification
+
+GPT-2 XL (1.5B), LLaMA-1 (7B), LLaMA-2 (7B), LLaMA-2 (13B) are used for editing.
+
+- These model editing methods are used in our paper as follows:
+  - [MEND](https://github.com/eric-mitchell/mend): Mitchell et al. Hypernetwork
+  - [KN](https://github.com/Hunter-DDM/knowledge-neurons): Damai Dai et al. Locate then Edit
+  - [ROME](https://github.com/kmeng01/rome): Kevin Meng et al. Locate and Edit
+  - [MEMIT](https://github.com/kmeng01/memit): Kevin Meng et al. Locate and Edit
