@@ -36,12 +36,12 @@ def exact_match_score(prediction, ground_truth):
 def ems(prediction, ground_truths):
     return max([exact_match_score(prediction, gt) for gt in ground_truths])
 
-tokenizer = GPT2Tokenizer.from_pretrained('/disk1/hxxu/EasyEdit-main/EasyEdit-main/hugging_cache/gpt2-xl')
+tokenizer = GPT2Tokenizer.from_pretrained('./hugging_cache/gpt2-xl')
 tokenizer.pad_token_id = tokenizer.eos_token_id
 tokenizer.padding_side='left'
 flag = False
 
-test_data = json.load(open(os.path.join("./data/edited-data", 'zsre_mend_eval_portability_gpt4.json'), 'r', encoding='utf-8'))
+test_data = json.load(open(os.path.join("./data/edited-data", 'zsre.json'), 'r', encoding='utf-8'))
 data = []
 for i in range(3111):
     j = i % 1037
