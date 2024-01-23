@@ -59,13 +59,13 @@ These could be changed in `hparams/<method_name>/`.
 Eight different downstream task evaluation metrics are as follows
 
 - `Reasoning`: solve rate
-- `Natural language inference (NLI) `: accuracy of two-way classification
+- `Natural language inference (NLI)`: accuracy of two-way classification
 - `Open-domain QA`: exact match(EM) with the reference answer after minor normalization
 - `Closed-domain QA`: exact match(EM) score
-- `Dialogue`:  select one best-matched response from four available candidates
-- `Summarization`:  the average of ROUGE-1, ROUGE-2 and ROUGE-L
-- `Named entity recognition (NER) `: entity-level F1-score
-- `Sentiment analysis`:  accuracy of two-wayclassification
+- `Dialogue`: select one best-matched response from four available candidates
+- `Summarization`: the average of ROUGE-1, ROUGE-2 and ROUGE-L
+- `Named entity recognition (NER)`: entity-level F1-score
+- `Sentiment analysis`: accuracy of two-wayclassification
 
 GPT-2 XL (1.5B), LLaMA-1 (7B), LLaMA-2 (7B), LLaMA-2 (13B) are used for editing.
 
