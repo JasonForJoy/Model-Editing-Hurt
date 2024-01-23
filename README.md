@@ -22,7 +22,7 @@ The whole data directory is as follows:
 data/
     |__ edited-data 
         |__ zsre.json
-    |__ BAKE_judge.json
+    |__ task-data
         |__ test-dialogue
         |__ test-ClosedDomainQA.jsonl
         |__ test-NER.txt
@@ -67,7 +67,7 @@ Eight different downstream task evaluation metrics are as follows
 - `Named entity recognition (NER)`: entity-level F1-score
 - `Sentiment analysis`: accuracy of two-wayclassification
 
-GPT-2 XL (1.5B), LLaMA-1 (7B), LLaMA-2 (7B), LLaMA-2 (13B) are used for editing.
+GPT-2 XL(1.5B), LLaMA-1(7B), LLaMA-2(7B), LLaMA-2(13B) are used for editing.
 
 - These model editing methods are used in our paper as follows:
   - [MEND](https://github.com/eric-mitchell/mend): Mitchell et al. Hypernetwork
