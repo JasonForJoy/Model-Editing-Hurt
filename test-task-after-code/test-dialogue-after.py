@@ -8,11 +8,11 @@ from easyeditor import KNHyperParams
 from easyeditor import MENDHyperParams
 from easyeditor import MEMITHyperParams
 
-tokenizer = GPT2Tokenizer.from_pretrained('/disk1/hxxu/EasyEdit-main/EasyEdit-main/hugging_cache/gpt2-xl')
+tokenizer = GPT2Tokenizer.from_pretrained('./hugging_cache/gpt2-xl')
 tokenizer.pad_token_id = tokenizer.eos_token_id
 tokenizer.padding_side='left'
 
-test_data = json.load(open(os.path.join("./data/edited-data", 'zsre_mend_eval_portability_gpt4.json'), 'r', encoding='utf-8'))
+test_data = json.load(open(os.path.join("./data/edited-data", 'zsre.json'), 'r', encoding='utf-8'))
 data = []
 for i in range(3111):
     j = i % 1037
