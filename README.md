@@ -80,23 +80,23 @@ If you want to evaluate the performance of the pre-edit model on various downstr
 ```bash
 python test-task.py <task>
 ```
-<task> is the name of the task you want to evaluate，you can choose from: **ClosedDomainQA**, **dialogue**, **NER**, **NLI**, **OpenDomainQA**, **reasoning**, **SentimentAnalysis**, **summarization**.
+task: The name of the task you want to evaluate，you can choose from: **ClosedDomainQA**, **dialogue**, **NER**, **NLI**, **OpenDomainQA**, **reasoning**, **SentimentAnalysis**, **summarization**.
 
 If you want to evaluate the performance of the edited model on various downstream tasks, run:
 ```bash
 python test-task-after.py <task> <mode> <method> <sample_begin> <sample_end> <sample_step>
 ```
-<mode>: the mode of editing you want to use，you can choose from: **Batch-Single**, **Instance-Sequential**, **Batch-Sequential**.
-<method>：the editing method you want to use，you can choose from: **ROME**, **MEMIT**, **KN**, **MEND**.
-<sample_begin>：the number at the beginning of the sample you selected in the dataset.
-<sample_end>：the number at the end of the sample you selected in the dataset.
-<sample_step>: one sample is selected every <sample_step> sample.
+mode: The mode of editing you want to use，you can choose from: **Batch-Single**, **Instance-Sequential**, **Batch-Sequential**.
+method：The editing method you want to use，you can choose from: **ROME**, **MEMIT**, **KN**, **MEND**.
+sample_begin：The number at the beginning of the sample you selected in the dataset.
+sample_end：The number at the end of the sample you selected in the dataset.
+sample_step: One sample is selected every sample_step sample.
 
-If you choose **Batch-Sequential** as <mode>, run:
+If you choose **Batch-Sequential** as mode, run:
 ```bash
 python test-task-after.py <task> <mode> <method> <sample_begin> <sample_end> <sample_step> <batch_size>
 ```
-<batch_size>: The size of the batch.
+batch_size: The size of the batch.
 
 If mode **Batch-Single** or mode **Instance-Sequential** is selected:
 Results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<sample_total>`.
