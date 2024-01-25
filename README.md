@@ -113,3 +113,36 @@ results from each run are stored at `test-result/test-<task>/result-<task>-<mode
 
 If mode **Batch-Sequential** is selected:
 results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<batch_size>*<edit_time>`.
+
+### Trainer
+To use the MEND method, you should firstly train a hypernetwork using the data in `data/training-data/`, and these weights would be saved in `result/models/MEND`.
+Then use the same steps above to edit models.
+Run:
+
+```bash
+python traine_MEND.py
+```
+
+## Citation
+If you use this code and dataset, please cite our paper:
+```bibtex
+@article{DBLP:journals/corr/abs-2401-04700,
+  author       = {Jia{-}Chen Gu and
+                  Hao{-}Xiang Xu and
+                  Jun{-}Yu Ma and
+                  Pan Lu and
+                  Zhen{-}Hua Ling and
+                  Kai{-}Wei Chang and
+                  Nanyun Peng},
+  title        = {Model Editing Can Hurt General Abilities of Large Language Models},
+  journal      = {CoRR},
+  year         = {2024},
+  url          = {https://doi.org/10.48550/arXiv.2401.04700},
+}
+```
+
+### Related Projects
+- [EasyEdit](https://github.com/zjunlp/EasyEdit)
+- [ROME](https://github.com/kmeng01/rome)
+
+We express sincere gratitude to [EasyEdit](https://github.com/zjunlp/EasyEdit) and [ROME](https://github.com/kmeng01/rome), as we have utilized portions of their source code in our project.
