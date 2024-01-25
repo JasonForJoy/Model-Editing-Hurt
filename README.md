@@ -35,7 +35,7 @@ data/
         |__ zsre_mend_train.json
         |__ zsre_mend_eval.json
 ```
-You can download these datasets here.
+You can download these datasets here. [[Google Drive]](https://drive.google.com/drive/folders/1isrBQ_8MTvbP1T8BqregyDy-t7bLFmPF?usp=sharing).
 
 ## Prepare the environment
 
