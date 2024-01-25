@@ -53,6 +53,7 @@ pip install -r requirements.txt
 
 ### Models
 All models are putted in `hugging_cache/<model_name>` (model_name=gpt2-xl, gpt-j-6B, or llama-7b).
+
 These could be changed in `hparams/<method_name>/`.
 
 ## Evaluation
@@ -75,7 +76,7 @@ GPT-2 XL(1.5B), LLaMA-1(7B), LLaMA-2(7B), LLaMA-2(13B) are used for editing.
   - [ROME](https://github.com/kmeng01/rome): Kevin Meng et al. Locate and Edit
   - [MEMIT](https://github.com/kmeng01/memit): Kevin Meng et al. Locate and Edit
 
-- These model editing mode are used in our paper as follows:
+- These model editing modes are used in our paper as follows:
   - `Instance-Sequential`: **ROME** and **KN** can be uesd
   - `Batch-Single`: **MEMIT** and **MEND** can be uesd
   - `Batch-Sequential`: **MEMIT** and **MEND** can be uesd
@@ -108,7 +109,7 @@ python test-task-after.py task mode method sample_begin sample_end sample_step b
 `batch_size`: The size of the batch.
 
 If mode **Batch-Single** or mode **Instance-Sequential** is selected:
-Results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<sample_total>`.
+results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<sample_total>`.
 
 If mode **Batch-Sequential** is selected:
-Results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<batch_size>*<edit_time>`.
+results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<batch_size>*<edit_time>`.
