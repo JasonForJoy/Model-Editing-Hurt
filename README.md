@@ -87,9 +87,13 @@ If you want to evaluate the performance of the edited model on various downstrea
 python test-task-after.py task mode method sample_begin sample_end sample_step
 ```
 mode: The mode of editing you want to use，you can choose from: **Batch-Single**, **Instance-Sequential**, **Batch-Sequential**.
+
 method：The editing method you want to use，you can choose from: **ROME**, **MEMIT**, **KN**, **MEND**.
+
 sample_begin：The number at the beginning of the sample you selected in the dataset.
+
 sample_end：The number at the end of the sample you selected in the dataset.
+
 sample_step: One sample is selected every sample_step sample.
 
 If you choose **Batch-Sequential** as mode, run:
