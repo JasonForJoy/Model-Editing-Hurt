@@ -75,6 +75,11 @@ GPT-2 XL(1.5B), LLaMA-1(7B), LLaMA-2(7B), LLaMA-2(13B) are used for editing.
   - [ROME](https://github.com/kmeng01/rome): Kevin Meng et al. Locate and Edit
   - [MEMIT](https://github.com/kmeng01/memit): Kevin Meng et al. Locate and Edit
 
+- These model editing mode are used in our paper as follows:
+  - `Instance-Sequential`: **ROME** and **KN** can be uesd
+  - `Batch-Single`: **MEMIT** and **MEND** can be uesd
+  - `Batch-Sequential`: **MEMIT** and **MEND** can be uesd
+
 ### Running the evaluation
 If you want to evaluate the performance of the pre-edit model on various downstream tasks, run:
 ```bash
