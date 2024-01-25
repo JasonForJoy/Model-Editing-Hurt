@@ -78,13 +78,13 @@ GPT-2 XL(1.5B), LLaMA-1(7B), LLaMA-2(7B), LLaMA-2(13B) are used for editing.
 ### Running the evaluation
 If you want to evaluate the performance of the pre-edit model on various downstream tasks, run:
 ```bash
-python test-task.py <task>
+python test-task.py task
 ```
 task: The name of the task you want to evaluate，you can choose from: **ClosedDomainQA**, **dialogue**, **NER**, **NLI**, **OpenDomainQA**, **reasoning**, **SentimentAnalysis**, **summarization**.
 
 If you want to evaluate the performance of the edited model on various downstream tasks, run:
 ```bash
-python test-task-after.py <task> <mode> <method> <sample_begin> <sample_end> <sample_step>
+python test-task-after.py task mode method sample_begin sample_end sample_step
 ```
 mode: The mode of editing you want to use，you can choose from: **Batch-Single**, **Instance-Sequential**, **Batch-Sequential**.
 method：The editing method you want to use，you can choose from: **ROME**, **MEMIT**, **KN**, **MEND**.
@@ -94,11 +94,12 @@ sample_step: One sample is selected every sample_step sample.
 
 If you choose **Batch-Sequential** as mode, run:
 ```bash
-python test-task-after.py <task> <mode> <method> <sample_begin> <sample_end> <sample_step> <batch_size>
+python test-task-after.py task mode method sample_begin sample_end sample_step batch_size
 ```
 batch_size: The size of the batch.
 
 If mode **Batch-Single** or mode **Instance-Sequential** is selected:
 Results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<sample_total>`.
+
 If mode **Batch-Sequential** is selected:
 Results from each run are stored at `test-result/test-<task>/result-<task>-<mode>-<method>-<batch_size>*<edit_time>`.
