@@ -13,6 +13,21 @@ from .rome_hparams import ROMEHyperParams
 
 CONTEXT_TEMPLATES_CACHE = None
 
+#Random
+def random_zero(tensor, prob):
+    random_tensor = torch.rand(tensor.shape)
+    tensor[random_tensor < prob] = 0
+    return tensor
+
+#RECT
+def set_min_to_zero(pos_matrix, matrix, possibility):
+    flattened_pos_matrix = pos_matrix.flatten()
+    flattened_matrix = matrix.flatten()
+    num_elements = flattened_pos_matrix.size
+    num_zeros = int(num_elements * possibility)
+    indices_to_zero = np.argpartition(flattened_pos_matrix, num_zeros)[:num_zeros]
+    flattened_matrix[indices_to_zero] = 0
+    modified_matrix = flattened_matrix.reshape(matrix.shape)
 
 def apply_rome_to_model(
     model: AutoModelForCausalLM,
