@@ -64,7 +64,28 @@ def apply_rome_to_model(
             if return_orig_weights and w_name not in weights_copy:
                 weights_copy[w_name] = w.detach().clone()
 
+
+            #Implementation of RECT
+            """
+            #Random
+            upd_matrix = random_zero(upd_matrix, 0.8)
+
+            #RECT
+            change_matrix = np.divide(upd_matrix.cpu().numpy(), w[...].cpu().numpy())
+            change_matrix = np.abs(change_matrix)
+            upd_matrix = set_min_to_zero(change_matrix, upd_matrix, 0.8)
+
+            #PCA
+            pca = PCA(n_components=320)
+            upd_matrix_pca = pca.fit_transform(upd_matrix.cpu().numpy())
+            upd_matrix_expanded = np.zeros((6400, 1600))
+            upd_matrix_expanded[:, :320] = upd_matrix_pca
+            device = f"cuda:{hparams.device}"
+            upd_matrix = torch.tensor(upd_matrix_expanded).to(device)
+            """
+            
             w[...] += upd_matrix
+            
 
         print(f"New weights successfully inserted into {list(deltas.keys())}")
 
