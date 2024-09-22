@@ -13,6 +13,9 @@ from .rome_hparams import ROMEHyperParams
 
 CONTEXT_TEMPLATES_CACHE = None
 
+import numpy as np
+from sklearn.decomposition import PCA
+
 #Random
 def random_zero(tensor, prob):
     random_tensor = torch.rand(tensor.shape)
