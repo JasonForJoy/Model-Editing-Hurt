@@ -1,8 +1,8 @@
-# Model Editing Can Hurt General Abilities of Large Language Models
+# Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue
 This repository will release the source code for the paper:
-- [Model Editing Can Hurt General Abilities of Large Language Models](https://arxiv.org/pdf/2401.04700.pdf). <br>
+- [Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue](https://arxiv.org/pdf/2401.04700.pdf). <br>
   Jia-Chen Gu, Hao-Xiang Xu, Jun-Yu Ma, Pan Lu, Zhe-Hua Ling, Kai-Wei Chang, Nanyun Peng <br>
-  _Preprint_ <br>
+  _EMNLP 2024_ <br>
 
 ## Overview
 In response to the challenge of hallucinations in the output of LLM due to false or outdated knowledge, **model editing** has received a lot of attention due to its low resource consumption. Previous studies have proposed many effective methods and achieved good results in editing performance. However, these model editing methods often overlooking potential sideeffects on the general abilities of LLMs.
@@ -129,18 +129,18 @@ python train_MEND.py
 ## Citation
 If you use this code and dataset, please cite our paper:
 ```bibtex
-@article{DBLP:journals/corr/abs-2401-04700,
-  author       = {Jia{-}Chen Gu and
-                  Hao{-}Xiang Xu and
-                  Jun{-}Yu Ma and
-                  Pan Lu and
-                  Zhen{-}Hua Ling and
-                  Kai{-}Wei Chang and
-                  Nanyun Peng},
-  title        = {Model Editing Can Hurt General Abilities of Large Language Models},
-  journal      = {CoRR},
-  year         = {2024},
-  url          = {https://doi.org/10.48550/arXiv.2401.04700},
+@inproceedings{gu-etal-2024-model,
+ title = "Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue",
+ author = "Gu, Jia-Chen  and
+           Xu, Hao-Xiang  and
+           Ma, Jun-Yu  and
+           Lu, Pan  and
+           Ling, Zhen-Hua  and
+           Chang, Kai-Wei  and
+           Peng, Nanyun",
+ booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+ year = "2024",
+ publisher = "Association for Computational Linguistics"
 }
 ```
 
