@@ -81,7 +81,7 @@ def apply_rome_to_model(
             #PCA
             pca = PCA(n_components=320)
             upd_matrix_pca = pca.fit_transform(upd_matrix.cpu().numpy())
-            upd_matrix_expanded = np.zeros((6400, 1600))
+            upd_matrix_expanded = np.zeros((6400, 1600))     #GPT2-XL
             upd_matrix_expanded[:, :320] = upd_matrix_pca
             device = f"cuda:{hparams.device}"
             upd_matrix = torch.tensor(upd_matrix_expanded).to(device)
