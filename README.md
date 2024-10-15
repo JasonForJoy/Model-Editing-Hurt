@@ -3,7 +3,7 @@ This repository contains the source code for the paper:
 - [Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue](https://arxiv.org/pdf/2401.04700.pdf). <br>
   Jia-Chen Gu, Hao-Xiang Xu, Jun-Yu Ma, Pan Lu, Zhe-Hua Ling, Kai-Wei Chang, Nanyun Peng <br>
   _EMNLP 2024_ <br>
-  **🌐 Project page**](https://jasonforjoy.github.io/Model-Editing-Hurt/)
+  [**🌐 Project page**](https://jasonforjoy.github.io/Model-Editing-Hurt/)
 
 ## Overview
 In response to the challenge of hallucinations in the output of LLM due to false or outdated knowledge, **model editing** has received a lot of attention due to its low resource consumption. Previous studies have proposed many effective methods and achieved good results in editing performance. However, these model editing methods often overlooking potential sideeffects on the general abilities of LLMs.
