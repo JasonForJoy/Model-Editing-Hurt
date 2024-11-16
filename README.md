@@ -127,6 +127,9 @@ Run:
 python train_MEND.py
 ```
 
+## RECT
+In the article, we introduce the RECT, designed to preserve the model's general abilities. We compare its performance against two baselines: random parameter selection and the PCA method for parameter selection. The implementation is provided in `./easyeditor/models/rome/rome_main.py`, which supports the selection of various methods as needed.
+
 ## Citation
 If you use this code and dataset, please cite our paper:
 ```bibtex
