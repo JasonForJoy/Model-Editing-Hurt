@@ -1,7 +1,7 @@
 # Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue
 This repository contains the source code for the paper:
 - [Model Editing Harms General Abilities of Large Language Models: Regularization to the Rescue](https://arxiv.org/pdf/2401.04700.pdf). <br>
-  Jia-Chen Gu, Hao-Xiang Xu, Jun-Yu Ma, Pan Lu, Zhe-Hua Ling, Kai-Wei Chang, Nanyun Peng <br>
+  Jia-Chen Gu, Hao-Xiang Xu, Jun-Yu Ma, Pan Lu, Zhen-Hua Ling, Kai-Wei Chang, Nanyun Peng <br>
   _EMNLP 2024_ <br>
   [**🌐 Project page**](https://jasonforjoy.github.io/Model-Editing-Hurt/)
 
