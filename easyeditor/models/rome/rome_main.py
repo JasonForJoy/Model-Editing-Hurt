@@ -31,6 +31,7 @@ def set_min_to_zero(pos_matrix, matrix, possibility):
     indices_to_zero = np.argpartition(flattened_pos_matrix, num_zeros)[:num_zeros]
     flattened_matrix[indices_to_zero] = 0
     modified_matrix = flattened_matrix.reshape(matrix.shape)
+    return modified_matrix
 
 def apply_rome_to_model(
     model: AutoModelForCausalLM,
